@@ -136,3 +136,16 @@ body {
        max-width: 90%;
    }
 }
+.message-content ul, .message-content ol {
+    margin-left: 20px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.message-content p {
+    margin-bottom: 8px;
+}
+
+.message-content p:last-child {
+    margin-bottom: 0;
+}
