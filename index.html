@@ -1,46 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Chat IA</title>
-   <link rel="stylesheet" href="assets/css/styles.css">
-   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Asistente de Inteligencia Artificial aplicado a las Tecnologías de Información y Comunicaciones"
+    >
+
+    <title>Chat IA | TIC</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/styles.css"
+    >
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+    ></script>
+
 </head>
+
 <body>
 
-   <main class="app">
-       <header class="header">
-           <div>
-               <h1>Chat IA</h1>
-               <p>Inteligencia Artificial aplicada a las TIC</p>
-           </div>
-           <span class="status">● IA disponible</span>
-       </header>
+    <main class="app">
 
-       <section id="messages" class="messages" aria-live="polite">
-           <div class="message assistant">
-               <div class="message-label">IA</div>
-               <div class="message-content">
-                   Hola. Soy tu asistente de Inteligencia Artificial.
-                   ¿En qué puedo ayudarte?
-               </div>
-           </div>
-       </section>
+        <!-- =================================================
+             ENCABEZADO
+             ================================================= -->
 
-       <form id="chatForm" class="chat-form">
-           <input
-               id="messageInput"
-               type="text"
-               maxlength="1000"
-               placeholder="Escribe una pregunta..."
-               autocomplete="off"
-               required
-           >
-           <button id="sendButton" type="submit">Enviar</button>
-       </form>
-   </main>
+        <header class="header">
 
-   <script src="assets/js/app.js"></script>
+            <div>
+
+                <section>
+
+                    <h1>Chat IA</h1>
+
+                    <p>
+                        Inteligencia Artificial aplicada a las TIC
+                    </p>
+
+                </section>
+
+            </div>
+
+            <span class="status">
+                ● IA disponible
+            </span>
+
+        </header>
+
+
+        <!-- =================================================
+             MENSAJES
+             ================================================= -->
+
+        <section
+            id="messages"
+            class="messages"
+            aria-live="polite"
+        >
+
+            <div class="message assistant">
+
+                <div class="message-label">
+                    IA
+                </div>
+
+                <div class="message-content">
+
+                    Hola. Soy tu asistente de
+                    Inteligencia Artificial.
+
+                    ¿En qué puedo ayudarte?
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CAMPO DE MENSAJE
+             ================================================= -->
+
+        <form
+            id="chatForm"
+            class="chat-form"
+        >
+
+            <input
+                id="messageInput"
+                type="text"
+                maxlength="1000"
+                placeholder="Escribe una pregunta..."
+                autocomplete="off"
+                required
+            >
+
+            <button
+                id="sendButton"
+                type="submit"
+                aria-label="Enviar mensaje"
+            >
+                Enviar
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="assets/js/app.js"></script>
+
 </body>
+
 </html>
