@@ -142,7 +142,7 @@ class handler(BaseHTTPRequestHandler):
            )
 
            response = client.responses.create(
-               model="gpt-5.6-luna",
+               model="gpt-4o-mini",
                instructions="""
                Eres un asistente educativo especializado
                en Tecnologías de Información y Comunicaciones.
