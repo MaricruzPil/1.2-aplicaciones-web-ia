@@ -137,31 +137,27 @@ class handler(BaseHTTPRequestHandler):
                )
                return
 
-           client = OpenAI(
-               api_key=api_key
-           )
+           client = OpenAI(api_key=api_key)
 
-           response = client.responses.create(
+           completion = client.chat.completions.create(
                model="gpt-4o-mini",
-               instructions="""
-               Eres un asistente educativo especializado
-               en Tecnologías de Información y Comunicaciones.
-               Responde siempre en español, de manera clara,
-               breve y didáctica. Incluye ejemplos cuando ayuden
-               a comprender el concepto.
-               """,
-               input=message,
-               reasoning={
-                   "effort": "none"
-               },
-               max_output_tokens=500
+               messages=[
+                   {
+                       "role": "system",
+                       "content": "Eres un asistente educativo especializado en Tecnologías de Información y Comunicaciones. Responde siempre en español, de manera clara, breve y didáctica. Incluye ejemplos cuando ayuden a comprender el concepto."
+                   },
+                   {
+                       "role": "user",
+                       "content": message
+                   }
+               ],
+               max_tokens=500
            )
 
            self.send_json(
                200,
                {
-                   "reply":
-                       response.output_text
+                   "reply": completion.choices[0].message.content
                }
            )
 
