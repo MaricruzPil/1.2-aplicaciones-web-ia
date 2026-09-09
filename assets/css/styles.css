@@ -647,3 +647,36 @@ body {
             0 10px 10px;
     }
 }
+/* =========================================================
+   FOOTER / CRÉDITOS
+   ========================================================= */
+
+.footer {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0 20px 12px;
+
+    flex-shrink: 0;
+
+    font-size: 10px;
+
+    color: #98989d;
+
+    text-align: center;
+}
+
+.footer strong {
+    color: #6e6e73;
+    font-weight: 600;
+}
+
+.footer span:nth-of-type(2) {
+    color: #c7c7cc;
+    margin: 0 2px;
+}
